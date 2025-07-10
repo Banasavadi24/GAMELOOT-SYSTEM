@@ -9,7 +9,6 @@ CORS(app)
 
 DATA_FILE = 'backend/data.json'
 
-# Load data
 def load_data():
     if not os.path.exists(DATA_FILE):
         with open(DATA_FILE, 'w') as f:
@@ -17,12 +16,10 @@ def load_data():
     with open(DATA_FILE) as f:
         return json.load(f)
 
-# Save data
 def save_data(data):
     with open(DATA_FILE, 'w') as f:
         json.dump(data, f, indent=4)
 
-# Routes
 @app.route('/games', methods=['GET'])
 def get_games():
     return jsonify(load_data())
