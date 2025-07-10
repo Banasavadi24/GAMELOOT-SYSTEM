@@ -1,4 +1,4 @@
-const API_URL = 'https://5001-your-codespace-id.preview.app.github.dev/games';
+const API_URL = 'https://organic-zebra-pj9vj79jwvj9h66r-5001.app.github.dev/games';
 
 function fetchGames() {
     fetch(API_URL)
