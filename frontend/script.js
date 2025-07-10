@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:5000/games';
+const API_URL = 'https://5001-your-codespace-id.preview.app.github.dev/games';
 
 function fetchGames() {
     fetch(API_URL)
