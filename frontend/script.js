@@ -1,11 +1,15 @@
+// frontend/script.js
+
 const API_URL = 'https://organic-zebra-pj9vj79jwvj9h66r-5001.app.github.dev/games';
+
+console.log("🚀 Gameloot script loaded");
 
 function fetchGames() {
     fetch(API_URL)
         .then(res => res.json())
         .then(data => {
             const list = document.getElementById('gameList');
-            list.innerHTML = ''; // clear old list
+            list.innerHTML = '';
 
             if (data.length === 0) {
                 list.innerHTML = '<li>No games found.</li>';
@@ -14,13 +18,13 @@ function fetchGames() {
 
             data.forEach(game => {
                 const li = document.createElement('li');
-                li.innerHTML = `${game.title} (${game.platform}) - $${game.price} 
+                li.innerHTML = `${game.title} (${game.platform}) - $${game.price}
                     <button onclick="deleteGame(${game.id})">Delete</button>`;
                 list.appendChild(li);
             });
         })
-        .catch(err => {
-            console.error('Failed to load games:', err);
+        .catch(error => {
+            console.error('Error loading games:', error);
         });
 }
 
@@ -37,27 +41,35 @@ function addGame() {
 
     fetch(API_URL, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ title, platform, condition, price })
     })
-    .then(res => {
-        if (res.ok) {
-            // Clear input fields
+    .then(response => {
+        if (response.ok) {
             document.getElementById('title').value = '';
             document.getElementById('platform').value = '';
             document.getElementById('condition').value = '';
             document.getElementById('price').value = '';
-            fetchGames(); // refresh list
+            fetchGames(); // Refresh list
         } else {
             alert('Failed to add game');
         }
+    })
+    .catch(error => {
+        console.error('Error adding game:', error);
     });
 }
 
 function deleteGame(id) {
     fetch(`${API_URL}/${id}`, {
         method: 'DELETE'
-    }).then(() => fetchGames());
+    })
+    .then(() => fetchGames())
+    .catch(error => {
+        console.error('Error deleting game:', error);
+    });
 }
 
 window.onload = fetchGames;
