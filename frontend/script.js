@@ -1,5 +1,6 @@
 const API_URL = 'https://organic-zebra-pj9vj79jwvj9h66r-5001.app.github.dev/games';
 
+
 function fetchGames() {
     fetch(API_URL)
         .then(res => res.json())
