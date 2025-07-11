@@ -5,7 +5,11 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*")
+
+@app.route('/')
+def home():
+    return "✅ Flask API is running. Try /games to see game data."
 
 DATA_FILE = 'backend/data.json'
 
@@ -23,10 +27,6 @@ def save_data(data):
 @app.route('/games', methods=['GET'])
 def get_games():
     return jsonify(load_data())
-
-@app.route('/')
-def home():
-    return "✅ Flask API is running. Try /games to see game data."
 
 @app.route('/games', methods=['POST'])
 def add_game():
