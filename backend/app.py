@@ -5,7 +5,7 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app, origins="*")
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def home():
