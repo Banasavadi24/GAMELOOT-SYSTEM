@@ -24,6 +24,10 @@ def save_data(data):
 def get_games():
     return jsonify(load_data())
 
+@app.route('/')
+def home():
+    return "✅ Flask API is running. Try /games to see game data."
+
 @app.route('/games', methods=['POST'])
 def add_game():
     data = load_data()
