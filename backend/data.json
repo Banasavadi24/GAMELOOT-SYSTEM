@@ -5,5 +5,19 @@
         "price": 10.0,
         "title": "Halo",
         "id": 1
+    },
+    {
+        "condition": "Used",
+        "platform": "Xbox",
+        "price": 10.0,
+        "title": "Halo",
+        "id": 2
+    },
+    {
+        "condition": "New",
+        "platform": "PS5",
+        "price": 59.99,
+        "title": "FIFA 23",
+        "id": 3
     }
 ]
