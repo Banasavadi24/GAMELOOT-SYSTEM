@@ -67,6 +67,19 @@ function addGame() {
     });
 }
 
+function editGame(id, title, platform, condition, price) {
+    // Populate input fields with current values
+    document.getElementById('title').value = title;
+    document.getElementById('platform').value = platform;
+    document.getElementById('condition').value = condition;
+    document.getElementById('price').value = price;
+
+    // Change Add button to Save Changes
+    const addBtn = document.querySelector('button[onclick="addGame()"]');
+    addBtn.textContent = 'Save Changes';
+    addBtn.setAttribute('onclick', `saveEditedGame(${id})`);
+}
+
 function deleteGame(id) {
     fetch(`${API_URL}/${id}`, {
         method: 'DELETE'
