@@ -19,8 +19,11 @@ function fetchGames() {
 
             data.forEach(game => {
                 const li = document.createElement('li');
-                li.innerHTML = `${game.title} (${game.platform}) - $${game.price}
-                    <button onclick="deleteGame(${game.id})">Delete</button>`;
+                li.innerHTML = `
+                    ${game.title} (${game.platform}) - $${game.price}
+                    <button onclick="editGame(${game.id}, '${game.title}', '${game.platform}', '${game.condition}', ${game.price})">Edit</button>
+                    <button onclick="deleteGame(${game.id})">Delete</button>
+                `;
                 list.appendChild(li);
             });
         })
@@ -28,6 +31,7 @@ function fetchGames() {
             console.error('Error loading games:', error);
         });
 }
+
 
 function addGame() {
     const title = document.getElementById('title').value;
