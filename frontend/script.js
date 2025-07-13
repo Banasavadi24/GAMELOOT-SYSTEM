@@ -1,9 +1,9 @@
 // frontend/script.js
 
-const API_URL = 'https://organic-zebra-pj9vj79jwvj9h66r-5001.app.github.dev/games';
+//const API_URL = 'https://organic-zebra-pj9vj79jwvj9h66r-5001.app.github.dev/games';
+const API_URL = 'http://127.0.0.1:5000/games';
 
-
-console.log("🚀 Gameloot script loaded");
+console.log("Gameloot script loaded");
 
 function fetchGames() {
     fetch(API_URL)

@@ -11,7 +11,7 @@ CORS(app, resources={r"/*": {"origins": "https://organic-zebra-pj9vj79jwvj9h66r-
 def home():
     return "Flask API is running. Try /games to see game data."
 
-DATA_FILE = 'backend/data.json'
+DATA_FILE = './data.json'
 
 def load_data():
     if not os.path.exists(DATA_FILE):
