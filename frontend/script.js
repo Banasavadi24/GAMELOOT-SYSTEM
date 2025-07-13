@@ -80,6 +80,40 @@ function editGame(id, title, platform, condition, price) {
     addBtn.setAttribute('onclick', `saveEditedGame(${id})`);
 }
 
+function saveEditedGame(id) {
+    const title = document.getElementById('title').value;
+    const platform = document.getElementById('platform').value;
+    const condition = document.getElementById('condition').value;
+    const price = parseFloat(document.getElementById('price').value);
+
+    fetch(`${API_URL}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, platform, condition, price })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Reset form
+            document.getElementById('title').value = '';
+            document.getElementById('platform').value = '';
+            document.getElementById('condition').value = '';
+            document.getElementById('price').value = '';
+
+            // Change Save button back to Add Game
+            const saveBtn = document.querySelector('button[onclick^="saveEditedGame"]');
+            saveBtn.textContent = 'Add Game';
+            saveBtn.setAttribute('onclick', 'addGame()');
+
+            fetchGames();
+        } else {
+            alert('Failed to update game');
+        }
+    })
+    .catch(error => {
+        console.error('Error updating game:', error);
+    });
+}
+
 function deleteGame(id) {
     fetch(`${API_URL}/${id}`, {
         method: 'DELETE'
