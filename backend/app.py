@@ -9,7 +9,7 @@ CORS(app, resources={r"/*": {"origins": "https://organic-zebra-pj9vj79jwvj9h66r-
 
 @app.route('/')
 def home():
-    return "✅ Flask API is running. Try /games to see game data."
+    return "Flask API is running. Try /games to see game data."
 
 DATA_FILE = 'backend/data.json'
 
