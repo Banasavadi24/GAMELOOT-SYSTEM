@@ -5,7 +5,8 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://organic-zebra-pj9vj79jwvj9h66r-5500.app.github.dev"}})
+CORS(app, supports_credentials=True)
+
 
 
 @app.route('/')
