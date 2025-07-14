@@ -8,7 +8,7 @@ Gameloot is a fictional retail company that specializes in buying, selling, and 
 
 ## Justification for Organisation Choice
 
-I selected Gameloot as it simulates a real-world business model with simple but essential requirements for an information system. It provides a clear opportunity to implement core CRUD functionalities, handle inventory, and support future rental and sales features. This makes it an ideal case for applying backend logic, data persistence, and web-based user interaction.
+I chose Gameloot because it is a simulation of a real-life business model that has simple yet fundamental needs of an information system. It offers an evident possibility to introduce basic CRUD functions, manage inventory, and facilitate further rental and sales options. This is why it is a perfect example of the use of backend logic, data persistence and web-based user interaction.
 
 
 ## System Features
@@ -36,11 +36,11 @@ Each game entry includes:
 
 This system includes:
 
-* Web interface for user interaction
-* JSON-based flat-file backend data storage
-* JavaScript-based frontend API interaction
-* Python Flask-based REST API backend
-* Full unit testing and one integration test
+*User interaction with web interface
+*Flat-file backend data storage in JSON
+*Frontend API interaction with JavaScript
+*REST API backend built with Python Flask
+*Unit testing of the entire unit and one integration test
 
 
 
