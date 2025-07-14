@@ -20,7 +20,7 @@ I selected Gameloot as it simulates a real-world business model with simple but 
 | Create    | Add new video game entries        |
 | Read      | List and retrieve existing games  |
 | Update    | Modify game details *(API-ready)* |
-| Delete    | Remove games from inventory       |
+| Edit      | Remove games from inventory       |
 
 Each game entry includes:
 
