@@ -43,7 +43,6 @@ This system includes:
 *Unit testing of the entire unit and one integration test
 
 
-
 ## System Architecture
 
 | Layer    | Technology              | Role                                    |
@@ -54,27 +53,14 @@ This system includes:
 | Hosting  | GitHub Codespaces       | All development and testing environment |
 
 
-## Folder Structure
-
-
-Gameloot/
-│
-├── backend/
-│   ├── app.py
-│   ├── data.json
-│   └── test_backend.py
-│
-├── frontend/
-│   ├── index.html
-│   └── script.js
-│
-├── requirements.txt
-└── README.md
-
-
 ## Status
 
-✅ All required features implemented
-✅ Unit + integration testing complete
-✅ GitHub public repository maintained
-✅ Attribution and documentation included
+1. All required features implemented
+2. Unit + integration testing complete
+3. GitHub public repository maintained
+4. Attribution and documentation included
+
+
+##REFERENCE
+Chatgpt and Goggle
+   
