@@ -36,11 +36,11 @@ Each game entry includes:
 
 This system includes:
 
-*User interaction with web interface
-*Flat-file backend data storage in JSON
-*Frontend API interaction with JavaScript
-*REST API backend built with Python Flask
-*Unit testing of the entire unit and one integration test
+- User interaction with web interface
+- Flat-file backend data storage in JSON
+- Frontend API interaction with JavaScript
+- REST API backend built with Python Flask
+- Unit testing of the entire unit and one integration test
 
 
 ## System Architecture
@@ -61,9 +61,13 @@ This system includes:
 4. Attribution and documentation included
 
 
-##REFERENCE 
-innerHtml: https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+## REFERENCE 
+innerHtml: https://www.youtube.com/watch?v=HcOc7P5BMi4
 id:(${id})`) - The HTML id attribute is used to specify a unique id for an HTML element.
-Basic knowlage about flask -  https://flask.palletsprojects.com/en/stable/_images/flask-name.svg
- Testcase--https://www.geeksforgeeks.org/python/unit-testing-python-unittest/
- chatgpt,w3school,geeksforgeeks  
+Basic knowlage about flask -  https://flask.palletsprojects.com/en/stable/_images/flask-name.svg 
+Testcase--https://www.geeksforgeeks.org/python/unit-testing-python-unittest/
+To connect data.json for backend ,To store and Retrieve the data, I reffered some of the blog from the the youtube given the links below;
+https://www.youtube.com/watch?v=ycmci-hiPfQ
+https://www.youtube.com/shorts/n-iQyqPWyxI
+
+ chatgpt,w3school,geeksforgeeks 
